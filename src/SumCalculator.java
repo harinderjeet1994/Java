@@ -1,9 +1,25 @@
 public class SumCalculator {
     public static void main(String[] args) {
-        System.out.println(getEvenDigitSum(12,23));
-    }
+        String companyName = "Pragra";
 
-        public static boolean getEvenDigitSum(int num1, int num2){
+
+        char[] chars = companyName.toCharArray();
+
+
+        for (int i = 0; i < chars.length / 2; i++) {
+            char temp = chars[i];
+            chars[i] = chars[chars.length - 1 - i];
+            chars[chars.length - 1 - i] = temp;
+        }
+
+
+        String reversed = new String(chars);
+
+        System.out.println(reversed);
+    }
+}
+
+       /* public static boolean getEvenDigitSum(int num1, int num2){
             if((num1 < 10) && (num2 > 99)){
                 return false;
             }
